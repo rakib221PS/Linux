@@ -1,0 +1,12 @@
+#!/bin/bash
+echo Enter directory name:
+read direc
+echo Enter file name:
+read fil
+if [[ $direc && $fil ]]
+then
+        `mkdir $direc`
+        `touch $direc/$fil`
+else
+        echo "One of them or both arguments are empty"
+fi

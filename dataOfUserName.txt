@@ -1,0 +1,11 @@
+#!/bin/bash
+read UserName
+IsExists=`cat /etc/group|grep "$UserName"`
+if [[ $IsExists ]]
+then
+        NameAndSureName=`cat /etc/passwd|grep "$UserName"|awk -F : '{print $5}'`
+        LastLogin=`finger $UserName|awk 'NR==3 { print $0}'`
+        echo "Name and sure name: $NameAndSureName && Last login details: $LastLogin"
+else
+        echo "The user is not exist"
+fi

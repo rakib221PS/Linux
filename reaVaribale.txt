@@ -1,0 +1,4 @@
+#!/bin/bash
+read Name
+echo User name $Name
+cat /etc/passwd|grep $Name

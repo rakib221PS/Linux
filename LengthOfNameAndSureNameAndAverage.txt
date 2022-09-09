@@ -1,0 +1,10 @@
+#!/usr/bin/awk -f
+BEGIN{FS=":"}
+{
+        printf "%d %s(%s)\n",NR,$5,$1;
+        printf "Length of name and surename %d\n",length($5);
+        total=total+length($5);
+        num++
+}
+#BEGIN{FS=":"}{printf "Length of name and surename %d\n",length($5);total=total+length($5);num++}
+END{print "Number of length ",num" and Average of name and sure name is ",total/num}

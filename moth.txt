@@ -1,0 +1,29 @@
+#!/bin/bash
+month=`date|cut -d " " -f 3`
+dat=`date|cut -d " " -f 2`
+case "$month" in
+        "Jan")echo "$dat Styczen"
+                ;;
+        "Feb")echo "$dat Luty"
+                ;;
+        "Mar")echo "$dat Marsz"
+                ;;
+        "Apr")echo "$dat Kwiecien"
+                ;;
+        "May")echo "$dat Moze"
+                ;;
+        "Jun")echo "$dat Czerwiec"
+                ;;
+        "Jul")echo "$dat Lipiec"
+                ;;
+        "Aug")echo "$dat Sierpien"
+                ;;
+        "Sep")echo "$dat Wrzesien"
+                ;;
+        "Oct")echo "$dat Pazdziernik"
+                ;;
+        "Nov")echo "$dat Listopad"
+                ;;
+        "Dec")echo "$dat Grudzien"
+                ;;
+esac

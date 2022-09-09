@@ -1,0 +1,10 @@
+#!/bin/bash
+TAB=(name claim game file nothing why)
+select ANSWER in ${TAB[*]}
+do
+        echo $ANSWER
+        if [[ $ANSWER == file ]]
+        then
+                break
+        fi
+done

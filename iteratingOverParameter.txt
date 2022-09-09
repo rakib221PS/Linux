@@ -1,0 +1,11 @@
+#!/bin/bash
+s=0
+sum(){
+        while [ $1 ]
+        do
+                let s=s+$1
+                shift
+        done
+        echo $s
+}
+sum 1 2 3 4 5

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo First Number:
+read number1
+echo Second Number:
+read number2
+echo sum $number1+$number2=$(($number1+number2))

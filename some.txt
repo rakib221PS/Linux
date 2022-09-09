@@ -1,0 +1,6 @@
+#!/bin/bash
+var=`awk -F ":" '/Anna/ {print $1}' /etc/passwd`
+for i in $var
+do
+        echo "bangladesh $i"
+done

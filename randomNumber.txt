@@ -1,0 +1,6 @@
+#!/bin/bash
+echo File name is $0
+echo PID $$
+echo User $USER
+echo Random number $RANDOM
+

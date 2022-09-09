@@ -1,0 +1,37 @@
+#!/bin/bash
+echo "Enter number n: "
+read n
+echo "Enter number m: "
+read m
+echo -e "Enter operation type \n Addition: 1 \n Subtraction: 2 \n Multiplication: 3 \n Division: 4"
+calculator(){
+        select OPERATION in 1 2 3 4
+        do
+        case "$OPERATION" in
+                1)val=`expr  $1 + $2`
+                        echo $val
+                        ;;
+                2)val=`expr  $1 - $2`
+                        echo $val
+                        ;;
+                3)val=`expr  $1 \* $2`
+                        echo $val
+                        ;;
+                4) if [ $2 == 0 ]
+                then
+                        echo "Denumerator can not be zero"
+                else
+                        val=`expr  $1 / $2`
+                        echo $val
+                fi
+                ;;
+        none)
+                break
+                ;;
+        *)
+                echo "Enrro: Invalid selection"
+                ;;
+esac
+done
+}
+calculator $n $m

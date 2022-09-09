@@ -1,0 +1,14 @@
+//Print full names of students who attempt the test with you. Put an asterisk next to those names whos uid is odd. Hint: try who --ips//
+
+#!/bin/bash
+all=`who --ips|awk '{print $1}'|sort|uniq`
+i=0
+len=${#all[@]}
+while [ $i -lt $len ]
+do
+        grep "${all[$i]}" /etc/passwd|awk -F ":" '{
+        if($3 % 2 == 0){print $1 "*"}
+                 else{print $1}
+                 }'
+        let i++
+done

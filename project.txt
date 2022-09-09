@@ -1,0 +1,5 @@
+#!/usr/bin/awk -f
+IF( ARGV[1] == 0 ){
+        print "No parameter"
+        exit
+}

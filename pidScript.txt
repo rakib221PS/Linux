@@ -1,0 +1,25 @@
+#!/bin/bash
+isExists=`ps -l|grep "$1"`
+j=0
+if [[ $isExists ]]
+then
+        last=`echo $1|cut -b 6`
+        pid=`ps -l|awk 'NR>1{print $5}'`
+        for i in $pid
+        do
+                la=`echo "$i"|cut -b 6`
+                if [[ $la == $last ]]
+                then
+                        ps -u|grep "$i"|awk 'NR>1{print $1,$2,$i,$11}'
+                        ((j=j+1))
+                fi
+        done
+else
+        echo "There is no children"
+        ((j=j+1))
+fi
+
+if [[ $j == 0 ]]
+then
+        echo "There is no children"
+fi

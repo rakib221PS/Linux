@@ -1,0 +1,21 @@
+#!/usr/bin/awk -f
+BEGIN{
+        if ( ARGV[1] == 0 ){
+                print "No file name"
+                n=0
+                exit
+                }
+                else if( ARGV[2] != 0 ){
+                        print "Too many file name"
+                n=0
+                exit
+
+                        }
+                else{
+                n=1
+                print "Enter a number"
+                getline number < "-"
+        }
+}
+{if (length($0)>number){printf "%d %s\n",NR,$0}else{num++}}
+END{if (n==0){exit}else{print "Omitted lines: ",num}}

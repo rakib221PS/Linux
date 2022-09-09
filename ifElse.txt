@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "Enter weight of the user: "
+read weight
+echo "Enter height of the user: "
+read height
+echo "Enter age of the user: "
+read age
+sub=`expr $height - 80`
+if [[ $weight -gt $sub ]]
+then
+        echo "Too big"
+else
+        echo "Not too big"
+fi

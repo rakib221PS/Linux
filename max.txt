@@ -1,0 +1,4 @@
+#!/usr/bin/awk -f
+BEGIN{
+        cat /etc/passwd|awk -F ":" '{print $1}'
+}

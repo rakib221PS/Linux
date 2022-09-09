@@ -1,0 +1,15 @@
+#!/bin/bash
+read -a arr
+longest(){
+        element=""
+        a=("$@")
+for WORD in ${a[@]}
+do
+        if [ ${#WORD} -gt ${#element} ]
+        then
+                 element=$WORD
+        fi
+done
+echo $element
+}
+longest "${arr[@]}"

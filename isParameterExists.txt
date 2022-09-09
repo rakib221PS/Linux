@@ -1,0 +1,4 @@
+#!/usr/bin/awk -F
+BEGIN{
+        if ( ARGC == 0 ) printf "%s\n","No parameter"
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+expr 5 + 4
+VAR = $( expr 10 - 3)
+echo $VAR

@@ -1,0 +1,4 @@
+#!/bin/bash
+userName=`who|sort -k3|head -1|awk '{print $1}'`
+nameAndSureName=`cat /etc/passwd|grep "$userName"|awk -F":" '{print $5}'`
+echo "$nameAndSureName"

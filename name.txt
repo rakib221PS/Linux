@@ -1,0 +1,7 @@
+#!/bin/bash
+VAR="MD RAKIB HASAN"
+VAR1="MD RAKIB HASAN"
+echo [ $VAR ]
+VAR_N=$VAR$VAR1
+echo $VAR_N
+echo ${#VAR}
